@@ -1,5 +1,6 @@
+// 질문들을 MBTI 4개 차원(E/I, S/N, T/F, J/P)이 골고루 섞이도록 재배치
 const questions = [
-    // E/I 유형 질문 (5개)
+    // 1번 - E/I
     {
         question: "주말에 에너지를 얻는 방법은?",
         answers: {
@@ -8,39 +9,7 @@ const questions = [
         },
         type: "EI"
     },
-    {
-        question: "새로운 사람을 만났을 때",
-        answers: {
-            A: "먼저 말을 걸고 대화를 시작한다",
-            B: "상대방이 먼저 말을 걸 때까지 기다린다"
-        },
-        type: "EI"
-    },
-    {
-        question: "파티에서 나는",
-        answers: {
-            A: "여러 사람들과 두루두루 대화한다",
-            B: "소수의 친한 사람들과 깊은 대화를 한다"
-        },
-        type: "EI"
-    },
-    {
-        question: "모임이 끝난 후에",
-        answers: {
-            A: "에너지가 충전된 느낌이다",
-            B: "혼자만의 시간이 필요하다"
-        },
-        type: "EI"
-    },
-    {
-        question: "스트레스를 받을 때",
-        answers: {
-            A: "사람들과 만나서 이야기한다",
-            B: "혼자 조용히 생각을 정리한다"
-        },
-        type: "EI"
-    },
-    // S/N 유형 질문 (5개)
+    // 2번 - S/N
     {
         question: "정보를 받아들일 때",
         answers: {
@@ -49,39 +18,7 @@ const questions = [
         },
         type: "SN"
     },
-    {
-        question: "일을 처리할 때",
-        answers: {
-            A: "정해진 방법대로 차근차근 진행한다",
-            B: "새로운 방법을 시도하고 창의적으로 접근한다"
-        },
-        type: "SN"
-    },
-    {
-        question: "대화를 할 때",
-        answers: {
-            A: "구체적이고 실질적인 내용을 선호한다",
-            B: "추상적이고 미래지향적인 주제를 좋아한다"
-        },
-        type: "SN"
-    },
-    {
-        question: "새로운 것을 배울 때",
-        answers: {
-            A: "실제 경험과 사례를 통해 배운다",
-            B: "이론과 개념을 먼저 이해한다"
-        },
-        type: "SN"
-    },
-    {
-        question: "책을 읽을 때",
-        answers: {
-            A: "현실적이고 실용적인 책을 선호한다",
-            B: "상상력을 자극하는 책을 좋아한다"
-        },
-        type: "SN"
-    },
-    // T/F 유형 질문 (5개)
+    // 3번 - T/F
     {
         question: "결정을 내릴 때 중요한 것은?",
         answers: {
@@ -90,39 +27,7 @@ const questions = [
         },
         type: "TF"
     },
-    {
-        question: "친구가 고민을 털어놓을 때",
-        answers: {
-            A: "해결책을 제시하고 조언한다",
-            B: "공감하고 감정을 이해해준다"
-        },
-        type: "TF"
-    },
-    {
-        question: "의견 충돌이 생겼을 때",
-        answers: {
-            A: "객관적인 사실과 논리로 설명한다",
-            B: "상대방의 입장을 이해하려 노력한다"
-        },
-        type: "TF"
-    },
-    {
-        question: "비판을 받았을 때",
-        answers: {
-            A: "내용이 타당한지 분석한다",
-            B: "상대방의 의도와 감정을 먼저 생각한다"
-        },
-        type: "TF"
-    },
-    {
-        question: "팀 프로젝트에서 중요하게 생각하는 것은?",
-        answers: {
-            A: "효율성과 성과",
-            B: "팀원들 간의 화합과 분위기"
-        },
-        type: "TF"
-    },
-    // J/P 유형 질문 (5개)
+    // 4번 - J/P
     {
         question: "갑자기 생긴 자유시간에",
         answers: {
@@ -131,6 +36,34 @@ const questions = [
         },
         type: "JP"
     },
+    // 5번 - E/I
+    {
+        question: "새로운 사람을 만났을 때",
+        answers: {
+            A: "먼저 말을 걸고 대화를 시작한다",
+            B: "상대방이 먼저 말을 걸 때까지 기다린다"
+        },
+        type: "EI"
+    },
+    // 6번 - S/N
+    {
+        question: "일을 처리할 때",
+        answers: {
+            A: "정해진 방법대로 차근차근 진행한다",
+            B: "새로운 방법을 시도하고 창의적으로 접근한다"
+        },
+        type: "SN"
+    },
+    // 7번 - T/F
+    {
+        question: "친구가 고민을 털어놓을 때",
+        answers: {
+            A: "해결책을 제시하고 조언한다",
+            B: "공감하고 감정을 이해해준다"
+        },
+        type: "TF"
+    },
+    // 8번 - J/P
     {
         question: "여행을 갈 때",
         answers: {
@@ -139,6 +72,34 @@ const questions = [
         },
         type: "JP"
     },
+    // 9번 - E/I
+    {
+        question: "파티에서 나는",
+        answers: {
+            A: "여러 사람들과 두루두루 대화한다",
+            B: "소수의 친한 사람들과 깊은 대화를 한다"
+        },
+        type: "EI"
+    },
+    // 10번 - S/N
+    {
+        question: "대화를 할 때",
+        answers: {
+            A: "구체적이고 실질적인 내용을 선호한다",
+            B: "추상적이고 미래지향적인 주제를 좋아한다"
+        },
+        type: "SN"
+    },
+    // 11번 - T/F
+    {
+        question: "의견 충돌이 생겼을 때",
+        answers: {
+            A: "객관적인 사실과 논리로 설명한다",
+            B: "상대방의 입장을 이해하려 노력한다"
+        },
+        type: "TF"
+    },
+    // 12번 - J/P
     {
         question: "업무 마감이 다가올 때",
         answers: {
@@ -147,6 +108,34 @@ const questions = [
         },
         type: "JP"
     },
+    // 13번 - E/I
+    {
+        question: "모임이 끝난 후에",
+        answers: {
+            A: "에너지가 충전된 느낌이다",
+            B: "혼자만의 시간이 필요하다"
+        },
+        type: "EI"
+    },
+    // 14번 - S/N
+    {
+        question: "새로운 것을 배울 때",
+        answers: {
+            A: "실제 경험과 사례를 통해 배운다",
+            B: "이론과 개념을 먼저 이해한다"
+        },
+        type: "SN"
+    },
+    // 15번 - T/F
+    {
+        question: "비판을 받았을 때",
+        answers: {
+            A: "내용이 타당한지 분석한다",
+            B: "상대방의 의도와 감정을 먼저 생각한다"
+        },
+        type: "TF"
+    },
+    // 16번 - J/P
     {
         question: "방 정리는",
         answers: {
@@ -155,6 +144,34 @@ const questions = [
         },
         type: "JP"
     },
+    // 17번 - E/I
+    {
+        question: "스트레스를 받을 때",
+        answers: {
+            A: "사람들과 만나서 이야기한다",
+            B: "혼자 조용히 생각을 정리한다"
+        },
+        type: "EI"
+    },
+    // 18번 - S/N
+    {
+        question: "책을 읽을 때",
+        answers: {
+            A: "현실적이고 실용적인 책을 선호한다",
+            B: "상상력을 자극하는 책을 좋아한다"
+        },
+        type: "SN"
+    },
+    // 19번 - T/F
+    {
+        question: "팀 프로젝트에서 중요하게 생각하는 것은?",
+        answers: {
+            A: "효율성과 성과",
+            B: "팀원들 간의 화합과 분위기"
+        },
+        type: "TF"
+    },
+    // 20번 - J/P
     {
         question: "계획에 변화가 생기면",
         answers: {
@@ -378,12 +395,14 @@ const personalityTypes = {
 
 let currentQuestion = 0;
 let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+let answerHistory = []; // 답변 히스토리를 저장
 
 const startScreen = document.getElementById('start-screen');
 const quizScreen = document.getElementById('quiz-screen');
 const resultScreen = document.getElementById('result-screen');
 const startBtn = document.getElementById('start-btn');
 const restartBtn = document.getElementById('restart-btn');
+const backBtn = document.getElementById('back-btn');
 const questionText = document.getElementById('question-text');
 const answerBtns = document.querySelectorAll('.answer-btn');
 const currentQuestionElement = document.getElementById('current-question');
@@ -391,6 +410,7 @@ const progress = document.getElementById('progress');
 
 startBtn.addEventListener('click', startQuiz);
 restartBtn.addEventListener('click', restartQuiz);
+backBtn.addEventListener('click', goBack);
 
 answerBtns.forEach(btn => {
     btn.addEventListener('click', () => selectAnswer(btn.dataset.value));
@@ -409,11 +429,25 @@ function showQuestion() {
     answerBtns[1].textContent = question.answers.B;
     currentQuestionElement.textContent = currentQuestion + 1;
     progress.style.width = ((currentQuestion + 1) / questions.length * 100) + '%';
+
+    // 첫 번째 질문이면 뒤로 가기 버튼 숨기기
+    if (currentQuestion === 0) {
+        backBtn.classList.add('hidden');
+    } else {
+        backBtn.classList.remove('hidden');
+    }
 }
 
 function selectAnswer(answer) {
     const question = questions[currentQuestion];
     const type = question.type;
+
+    // 답변 히스토리 저장
+    answerHistory.push({
+        questionIndex: currentQuestion,
+        answer: answer,
+        type: type
+    });
 
     if (answer === 'A') {
         scores[type[0]]++;
@@ -432,6 +466,25 @@ function selectAnswer(answer) {
             showResult();
         }, 200);
     }
+}
+
+function goBack() {
+    if (answerHistory.length === 0) return;
+
+    // 마지막 답변 가져오기
+    const lastAnswer = answerHistory.pop();
+    const type = lastAnswer.type;
+
+    // 점수 되돌리기
+    if (lastAnswer.answer === 'A') {
+        scores[type[0]]--;
+    } else {
+        scores[type[1]]--;
+    }
+
+    // 이전 질문으로 이동
+    currentQuestion = lastAnswer.questionIndex;
+    showQuestion();
 }
 
 function showResult() {
@@ -496,6 +549,7 @@ function calculatePersonality() {
 function restartQuiz() {
     currentQuestion = 0;
     scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+    answerHistory = [];
     resultScreen.classList.add('hidden');
     startScreen.classList.remove('hidden');
 }
