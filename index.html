@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성격 유형 테스트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen">
+            <h1>성격 유형 테스트</h1>
+            <p>10개의 질문을 통해 당신의 성격 유형을 알아보세요!</p>
+            <button id="start-btn" class="btn">시작하기</button>
+        </div>
+
+        <div id="quiz-screen" class="screen hidden">
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <div class="question-counter">
+                <span id="current-question">1</span> / 10
+            </div>
+            <h2 id="question-text"></h2>
+            <div class="answers">
+                <button class="answer-btn" data-value="A"></button>
+                <button class="answer-btn" data-value="B"></button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <h1>당신의 성격 유형은?</h1>
+            <div class="result-type">
+                <h2 id="result-type"></h2>
+                <p id="result-desc"></p>
+            </div>
+            <div class="result-details">
+                <h3>특징</h3>
+                <ul id="result-traits"></ul>
+            </div>
+            <button id="restart-btn" class="btn">다시 테스트하기</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
