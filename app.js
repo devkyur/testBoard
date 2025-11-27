@@ -397,19 +397,36 @@ let currentQuestion = 0;
 let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
 let answerHistory = []; // 답변 히스토리를 저장
 
-const startScreen = document.getElementById('start-screen');
+const mainScreen = document.getElementById('main-screen');
+const personalityStartScreen = document.getElementById('personality-start-screen');
 const quizScreen = document.getElementById('quiz-screen');
 const resultScreen = document.getElementById('result-screen');
-const startBtn = document.getElementById('start-btn');
+const testCards = document.querySelectorAll('.test-card');
+const personalityStartBtn = document.getElementById('personality-start-btn');
 const restartBtn = document.getElementById('restart-btn');
+const backToMainBtn = document.getElementById('back-to-main-btn');
+const resultToMainBtn = document.getElementById('result-to-main-btn');
 const backBtn = document.getElementById('back-btn');
 const questionText = document.getElementById('question-text');
 const answerBtns = document.querySelectorAll('.answer-btn');
 const currentQuestionElement = document.getElementById('current-question');
 const progress = document.getElementById('progress');
 
-startBtn.addEventListener('click', startQuiz);
+// 메인 화면에서 테스트 카드 클릭
+testCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+        const testType = card.dataset.test;
+        if (testType === 'personality') {
+            mainScreen.classList.add('hidden');
+            personalityStartScreen.classList.remove('hidden');
+        }
+    });
+});
+
+personalityStartBtn.addEventListener('click', startQuiz);
 restartBtn.addEventListener('click', restartQuiz);
+backToMainBtn.addEventListener('click', backToMain);
+resultToMainBtn.addEventListener('click', backToMain);
 backBtn.addEventListener('click', goBack);
 
 answerBtns.forEach(btn => {
@@ -417,7 +434,7 @@ answerBtns.forEach(btn => {
 });
 
 function startQuiz() {
-    startScreen.classList.add('hidden');
+    personalityStartScreen.classList.add('hidden');
     quizScreen.classList.remove('hidden');
     showQuestion();
 }
@@ -551,5 +568,20 @@ function restartQuiz() {
     scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
     answerHistory = [];
     resultScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
+    personalityStartScreen.classList.remove('hidden');
+}
+
+function backToMain() {
+    // 모든 화면 숨기기
+    personalityStartScreen.classList.add('hidden');
+    quizScreen.classList.add('hidden');
+    resultScreen.classList.add('hidden');
+
+    // 상태 초기화
+    currentQuestion = 0;
+    scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+    answerHistory = [];
+
+    // 메인 화면 표시
+    mainScreen.classList.remove('hidden');
 }
