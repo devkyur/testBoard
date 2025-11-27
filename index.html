@@ -10,7 +10,7 @@
     <div class="container">
         <div id="start-screen" class="screen">
             <h1>성격 유형 테스트</h1>
-            <p>10개의 질문을 통해 당신의 성격 유형을 알아보세요!</p>
+            <p>20개의 질문을 통해 당신의 성격 유형을 알아보세요!</p>
             <button id="start-btn" class="btn">시작하기</button>
         </div>
 
@@ -19,7 +19,7 @@
                 <div id="progress" class="progress"></div>
             </div>
             <div class="question-counter">
-                <span id="current-question">1</span> / 10
+                <span id="current-question">1</span> / 20
             </div>
             <h2 id="question-text"></h2>
             <div class="answers">
@@ -31,12 +31,23 @@
         <div id="result-screen" class="screen hidden">
             <h1>당신의 성격 유형은?</h1>
             <div class="result-type">
+                <div id="result-character" class="character"></div>
                 <h2 id="result-type"></h2>
                 <p id="result-desc"></p>
             </div>
             <div class="result-details">
                 <h3>특징</h3>
                 <ul id="result-traits"></ul>
+            </div>
+            <div class="compatibility">
+                <div class="best-match">
+                    <h3>💕 궁합이 잘 맞는 유형</h3>
+                    <div id="best-matches" class="match-list"></div>
+                </div>
+                <div class="worst-match">
+                    <h3>⚠️ 조심해야 할 유형</h3>
+                    <div id="worst-matches" class="match-list"></div>
+                </div>
             </div>
             <button id="restart-btn" class="btn">다시 테스트하기</button>
         </div>
