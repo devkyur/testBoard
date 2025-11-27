@@ -18,6 +18,12 @@
                     <p>MBTI 기반 20가지 질문으로 당신의 성격 유형을 알아보세요</p>
                     <button class="test-btn">시작하기</button>
                 </div>
+                <div class="test-card" data-test="tarot">
+                    <div class="test-icon">🔮</div>
+                    <h2>오늘의 타로 운세</h2>
+                    <p>신비로운 타로 카드로 오늘의 전체운, 금전운, 관계운을 확인해보세요</p>
+                    <button class="test-btn">시작하기</button>
+                </div>
                 <!-- 향후 추가될 테스트들을 위한 공간 -->
             </div>
         </div>
@@ -70,8 +76,56 @@
             <button id="restart-btn" class="btn">다시 테스트하기</button>
             <button id="result-to-main-btn" class="btn-secondary">← 메인으로</button>
         </div>
+
+        <!-- 타로 운세 시작 화면 -->
+        <div id="tarot-start-screen" class="screen hidden">
+            <h1>🔮 오늘의 타로 운세</h1>
+            <p class="tarot-intro">22장의 메이저 아르카나 카드 중 3장을 선택하여<br>오늘의 운세를 확인해보세요</p>
+            <div class="fortune-types">
+                <div class="fortune-type-card">
+                    <div class="fortune-icon">🌟</div>
+                    <h3>전체운</h3>
+                    <p>오늘 하루의 전반적인 운세</p>
+                </div>
+                <div class="fortune-type-card">
+                    <div class="fortune-icon">💰</div>
+                    <h3>금전운</h3>
+                    <p>재물과 재정 관련 운세</p>
+                </div>
+                <div class="fortune-type-card">
+                    <div class="fortune-icon">💕</div>
+                    <h3>관계운</h3>
+                    <p>인간관계와 사랑 운세</p>
+                </div>
+            </div>
+            <button id="tarot-start-btn" class="btn">카드 선택하기</button>
+            <button id="tarot-back-to-main-btn" class="btn-secondary">← 메인으로</button>
+        </div>
+
+        <!-- 타로 카드 선택 화면 -->
+        <div id="tarot-select-screen" class="screen hidden">
+            <h1>🔮 카드를 선택하세요</h1>
+            <div class="card-selection-info">
+                <p>3장의 카드를 선택해주세요</p>
+                <div class="selection-counter">
+                    선택한 카드: <span id="selected-card-count">0 / 3</span>
+                </div>
+            </div>
+            <div id="card-grid" class="card-grid"></div>
+            <button id="show-result-btn" class="btn hidden">운세 확인하기</button>
+        </div>
+
+        <!-- 타로 결과 화면 -->
+        <div id="tarot-result-screen" class="screen hidden">
+            <h1>🔮 오늘의 타로 운세</h1>
+            <p class="result-intro">선택하신 카드로 본 오늘의 운세입니다</p>
+            <div id="tarot-result-cards" class="tarot-results"></div>
+            <button id="tarot-restart-btn" class="btn">다시 보기</button>
+            <button id="tarot-result-to-main-btn" class="btn-secondary">← 메인으로</button>
+        </div>
     </div>
 
     <script src="app.js"></script>
+    <script src="tarot.js"></script>
 </body>
 </html>
