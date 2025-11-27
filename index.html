@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>성격 유형 테스트</title>
+    <title>심리 테스트 모음</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div id="start-screen" class="screen">
+        <div id="main-screen" class="screen">
+            <h1>심리 테스트 모음</h1>
+            <p>다양한 심리 테스트를 통해 자신을 알아가보세요!</p>
+            <div class="test-grid">
+                <div class="test-card" data-test="personality">
+                    <div class="test-icon">🧠</div>
+                    <h2>성격 유형 테스트</h2>
+                    <p>MBTI 기반 20가지 질문으로 당신의 성격 유형을 알아보세요</p>
+                    <button class="test-btn">시작하기</button>
+                </div>
+                <!-- 향후 추가될 테스트들을 위한 공간 -->
+            </div>
+        </div>
+
+        <div id="personality-start-screen" class="screen hidden">
             <h1>성격 유형 테스트</h1>
             <p>20개의 질문을 통해 당신의 성격 유형을 알아보세요!</p>
-            <button id="start-btn" class="btn">시작하기</button>
+            <button id="personality-start-btn" class="btn">시작하기</button>
+            <button id="back-to-main-btn" class="btn-secondary">← 메인으로</button>
         </div>
 
         <div id="quiz-screen" class="screen hidden">
@@ -53,6 +68,7 @@
                 </div>
             </div>
             <button id="restart-btn" class="btn">다시 테스트하기</button>
+            <button id="result-to-main-btn" class="btn-secondary">← 메인으로</button>
         </div>
     </div>
 
